@@ -7,11 +7,11 @@ function shopNow() {
 totalCost(80);
 
 }
-function logCustomer(name: string = 'Eos Customer'): void {
+function logCustomer(name: string = 'Eos Applicants Customer'): void {
     console.log(`New grocery list for customer: ${name}`);
 }
 
-function totalCost(score: number,  customerName: string = 'Eos Customer'): void {
+function totalCost(score: number,  customerName: string = 'Eos APPLICATION Customer'): void {
  let scoreElement: HTMLElement | null = document.getElementById('totalCost');
   scoreElement!.innerText = `${score} - ${customerName}`;
 }
@@ -33,4 +33,4 @@ function getInputValue(elementID: string): string | undefined {
 
   
 
-document.getElementById('shopNow')!.addEventListener('click', shopNow);
+document.getElementById('ShopNOW')!.addEventListener('click', shopNow);
