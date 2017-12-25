@@ -5,22 +5,15 @@ function shopNow() {
 	logCustomer(customerName);
 
   let messagesElement: HTMLElement | null = document.getElementById('messages');
-  
-  if (messagesElement === null ) {
-    return messagesElement;
-  }
-  else {
-    console.log(messagesElement);
-    messagesElement = document.getElementById('messages');
-  }
-
-	messagesElement!.innerText = 'Welcome to Eos! Show now....';
-	console.log('Starting new grocery list');
+  messagesElement!.innerText = 'Welcome to Eos! Show now....';
+ console.log(messagesElement);
 
 }
 
-	function logCustomer(name) {
+
+
+	function logCustomer(name: string): void {
 		console.log(`New grocery list for customer: ${name}`);
 	}
 
-document.getElementById('ShopNOW').addEventListener('click', shopNow);
+document.getElementById('shopNow')!.addEventListener('click', shopNow);
