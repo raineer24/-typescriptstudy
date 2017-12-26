@@ -33,4 +33,7 @@ let logMessage = (message) => console.log(message);
 function logError(error) {
     console.error(error);
 }
+let firstCustomer = new Customer();
+firstCustomer.name = 'Maria';
+console.log(firstCustomer.formatName());
 //# sourceMappingURL=app.js.map

@@ -53,3 +53,8 @@ let logMessage = (message: string) => console.log(message);
 function logError(error: string): void {
   console.error(error);
 }
+
+
+let firstCustomer: Customer = new Customer();
+firstCustomer.name = 'Maria';
+console.log(firstCustomer.formatName());
