@@ -1,19 +1,26 @@
 function shopNow() {
-    var customerName = getInputValue('customername');
+    let customerName = getInputValue('customername');
     logCustomer(customerName);
-    totalCost(80);
+    totalCost(80, customerName);
+    totalCost(-5, customerName);
 }
-function logCustomer(name) {
-    if (name === void 0) { name = 'Eos Applicants Customer'; }
-    console.log("New grocery list for customer: " + name);
+function logCustomer(name = 'Eos  Customer') {
+    console.log(`New grocery list for customer:  ${name}`);
 }
-function totalCost(score, customerName) {
-    if (customerName === void 0) { customerName = 'Eos APPLICATION Customer'; }
-    var scoreElement = document.getElementById('totalCost');
-    scoreElement.innerText = score + " - " + customerName;
+function totalCost(score, customerName = 'Eos A!pp!! Customer') {
+    let logger;
+    if (score < 0) {
+        logger = logError;
+    }
+    else {
+        logger = logMessage;
+    }
+    let scoreElement = document.getElementById('totalCost');
+    scoreElement.innerText = `${score} - ${customerName}`;
+    logger(`Score: ${score}`);
 }
 function getInputValue(elementID) {
-    var inputElement = document.getElementById(elementID);
+    let inputElement = document.getElementById(elementID);
     if (inputElement.value === ' ') {
         return undefined;
     }
@@ -22,4 +29,8 @@ function getInputValue(elementID) {
     }
 }
 document.getElementById('ShopNOW').addEventListener('click', shopNow);
+let logMessage = (message) => console.log(message);
+function logError(error) {
+    console.error(error);
+}
 //# sourceMappingURL=app.js.map
