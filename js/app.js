@@ -1,3 +1,8 @@
+class Customer {
+    formatName() {
+        return this.name.toUpperCase();
+    }
+}
 function shopNow() {
     let customerName = getInputValue('customername');
     logCustomer(customerName);

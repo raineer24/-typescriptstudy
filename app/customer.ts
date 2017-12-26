@@ -1,3 +1,6 @@
+/// <reference path="person.ts" />
+
+
 class Customer implements Person {
     name: string;
     age?: number;

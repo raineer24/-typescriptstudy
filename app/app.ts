@@ -1,3 +1,6 @@
+/// <reference path="customer.ts" />
+
+
 function shopNow() {
     // starting a new game
     
