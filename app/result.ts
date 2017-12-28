@@ -1,4 +1,4 @@
-interface Result {
+export interface Result {
     customerName: string;
     score: number;
     problemCount: number;
