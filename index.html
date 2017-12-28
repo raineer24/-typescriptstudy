@@ -56,6 +56,23 @@
     
     <!-- add script tags here -->
     
-    <script src="js/app.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+
+    <script>
+        System.config({
+            // paths: {
+            //     'lodash': 'node_modules/lodash/lodash'
+            // },
+            meta: {
+                format: 'cjs'
+            },
+            packages: {
+                '.': {
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('./js/app.js');
+    </script>    
 </body>
 </html>
